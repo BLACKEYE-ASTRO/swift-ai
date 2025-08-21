@@ -10,12 +10,8 @@ import userRouter from './routes/userRoutes.js';
 const app =express();
 await connectCloudinary();
 
-app.use(cors({
-    origin:"https://swift-ai-sigma.vercel.app",
-    credentials:true
-}));
+app.use(cors());
 
-app.options('*', cors());
 app.use(express.json());
 app.use(clerkMiddleware());
 
